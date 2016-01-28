@@ -1,0 +1,20 @@
+$part1color: #76dfe3;
+
+.intro {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  &__part {
+    height: 100px;
+    width: 40px;
+    &--1 {
+      border-top: 82px solid $part1color;
+      border-left: 46px solid transparent;
+      border-right: 45px solid transparent;
+      height: 0;
+      width: 100px;
+      margin: 100px;
+      transform: rotate(-30deg);
+    }
+  }
+}
