@@ -1,20 +1,55 @@
 $part1color: #76dfe3;
 
-.intro {
-  margin: 0;
+.logo-canvas {
+  margin: 50px 0 0 100px;
   list-style: none;
+  height: 450px;
   padding: 0;
-  &__part {
-    height: 100px;
-    width: 40px;
-    &--1 {
-      border-top: 82px solid $part1color;
-      border-left: 46px solid transparent;
-      border-right: 45px solid transparent;
-      height: 0;
-      width: 100px;
-      margin: 100px;
-      transform: rotate(-30deg);
+  position: relative;
+  width: 450px;
+  &:hover {
+    .logo-part-2 {
+      transform: rotateY(180deg);
     }
+  }
+}
+
+.logo-part {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.3s linear;
+  > span {
+    display: block;
+  }
+}
+
+.logo-part-1 {
+  left: 0;
+  top: 0;
+  width: 159px;
+  z-index: 1;
+  > span {
+    border-top: 82px solid $part1color;
+    border-left: 46px solid transparent;
+    border-right: 45px solid transparent;
+    height: 0;
+    width: 100px;
+    transform: rotate(-29deg);
+  }
+}
+
+.logo-part-2 {
+  left: 0;
+  transform-origin: right;
+  top: 0;
+  width: 159px;
+  z-index: 2;
+  > span {
+    border-top: 82px solid $part1color;
+    border-left: 46px solid transparent;
+    border-right: 45px solid transparent;
+    height: 0;
+    width: 100px;
+    transform: rotate(-29deg);
   }
 }
