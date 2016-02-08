@@ -3,72 +3,95 @@ $turquoise: #3dcfd4;
 $scooter: #3bc7cc;
 $pelorous: #35b6ba;
 
-$canvas-width: 318px;
+$canvas-size: 318px;
+
+$animation-duration: 300ms;
 
 .logo-canvas {
   border: 1px solid red;
-  list-style: none;
-  height: 450px;
+  height: $canvas-size;
   margin-top: 100px;
-  margin-left: 100px;
-  padding: 0;
+  margin-left: 500px;
   position: relative;
-  width: $canvas-width;
+  width: $canvas-size;
 }
 
 .shape {
+  animation-duration: $animation-duration;
+  animation-fill-mode: forwards;
+  visibility: hidden;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 0.3s linear;
-  transform-origin: $canvas-width/2 0;
+  transform-origin: $canvas-size/2 0;
   width: 0;
 }
 
 .shape-1 {
   left: 0;
   top: 0;
+  visibility: visible;
+  z-index: 10;
   .trapeze {
     transform: rotate(-30deg);
   }
 }
 
 .shape-2 {
+  animation-name: shape-2;
+  animation-delay: $animation-duration;
   left: 0;
   top: 0;
-  transform: rotateY(180deg);
+  z-index: 9;
   .trapeze {
     transform: rotate(-30deg);
   }
 }
 
 .shape-3 {
+  animation-name: shape-3;
+  animation-delay: 2 * $animation-duration;
   right: 189px;
   top: 75px;
-  transform: rotate(60deg) rotateY(180deg);
-  z-index: 5;
+  z-index: 8;
   .trapeze {
     transform: rotate(-30deg);
   }
 }
 
 .shape-4 {
+  animation-name: shape-4;
+  animation-delay: 3 * $animation-duration;
   right: 189px;
   top: 223px;
-  transform: rotate(120deg) rotateY(180deg);
+  z-index: 7;
   .trapeze {
     transform: rotate(-30deg);
   }
 }
 
 .shape-5 {
+  animation-name: shape-5;
+  animation-delay: 4 * $animation-duration;
   right: 159px;
   top: 200px;
   transform-origin: 0 0;
-  transform: rotateY(180deg);
+  z-index: 6;
   .rectangle {
     height: 93px;
     width: 165px;
     transform: skewY(-30deg);
+  }
+}
+
+.shape-6 {
+  animation-name: shape-6;
+  animation-delay: 5 * $animation-duration;
+  left: -62px;
+  top: 250px;
+  z-index: 5;
+  .trapeze {
+    transform: rotate(-90deg);
   }
 }
 
@@ -88,6 +111,10 @@ $canvas-width: 318px;
   border-top-color: $turquoise;
 }
 
+.trapeze-pelorous {
+  border-top-color: $pelorous;
+}
+
 .rectangle {
   height: 80px;
   width: 160px;
@@ -95,4 +122,54 @@ $canvas-width: 318px;
 
 .rectangle-scooter {
   background-color: $scooter;
+}
+
+@keyframes shape-2 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes shape-3 {
+  0% {
+    transform: rotate(60deg) rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(60deg) rotateY(180deg);
+  }
+}
+
+@keyframes shape-4 {
+  0% {
+    transform: rotate(120deg) rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(120deg) rotateY(180deg);
+  }
+}
+
+@keyframes shape-5 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes shape-6 {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateX(0deg);
+  }
 }
