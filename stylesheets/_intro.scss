@@ -5,15 +5,16 @@ $pelorous: #35b6ba;
 
 $canvas-size: 318px;
 
-$animation-duration: 300ms;
+$animation-duration: 400ms;
 
 .pm-logo {
-  border: 1px solid red;
   height: $canvas-size;
-  margin-top: 100px;
-  margin-left: 500px;
-  position: relative;
+  margin-left: -$canvas-size/2;
+  margin-top: -$canvas-size/2 - 30;
+  left: 50%;
+  position: absolute;
   width: $canvas-size;
+  top: 50%;
 }
 
 .shape {
