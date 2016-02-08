@@ -7,7 +7,7 @@ $canvas-size: 318px;
 
 $animation-duration: 300ms;
 
-.logo-canvas {
+.pm-logo {
   border: 1px solid red;
   height: $canvas-size;
   margin-top: 100px;
@@ -25,105 +25,96 @@ $animation-duration: 300ms;
   transition: transform 0.3s linear;
   transform-origin: $canvas-size/2 0;
   width: 0;
-}
+  &--1 {
+    left: 0;
+    top: 0;
+    visibility: visible;
+    z-index: 10;
+    .shape__trapeze {
+      transform: rotate(-30deg);
+    }
+  }
+  &--2 {
+    animation-name: shape-2;
+    animation-delay: $animation-duration;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    .shape__trapeze {
+      transform: rotate(-30deg);
+    }
+  }
+  &--3 {
+    animation-name: shape-3;
+    animation-delay: 2 * $animation-duration;
+    right: 189px;
+    top: 75px;
+    z-index: 8;
+    .shape__trapeze {
+      transform: rotate(-30deg);
+    }
+  }
+  &--4 {
+    animation-name: shape-4;
+    animation-delay: 3 * $animation-duration;
+    right: 189px;
+    top: 223px;
+    z-index: 7;
+    .shape__trapeze {
+      transform: rotate(-30deg);
+    }
+  }
+  &--5 {
+    animation-name: shape-5;
+    animation-delay: 4 * $animation-duration;
+    right: 159px;
+    top: 200px;
+    transform-origin: 0 0;
+    z-index: 6;
+    .shape__rectangle {
+      height: 93px;
+      width: 165px;
+      transform: skewY(-30deg);
+    }
+  }
+  &--6 {
+    animation-name: shape-6;
+    animation-delay: 5 * $animation-duration;
+    left: -62px;
+    top: 250px;
+    z-index: 5;
+    .shape__trapeze {
+      transform: rotate(-90deg);
+    }
+  }
 
-.shape-1 {
-  left: 0;
-  top: 0;
-  visibility: visible;
-  z-index: 10;
-  .trapeze {
-    transform: rotate(-30deg);
+  &__trapeze {
+    border-top: 80px solid;
+    border-left: 46px solid transparent;
+    border-right: 46px solid transparent;
+    height: 0;
+    width: 100px;
+    &--aquamarine-blue {
+      border-top-color: $aquamarine-blue;
+    }
+    &--turquoise {
+      border-top-color: $turquoise;
+    }
+    &--pelorous {
+      border-top-color: $pelorous;
+    }
+  }
+
+  &__rectangle {
+    height: 80px;
+    width: 160px;
+    &--scooter {
+      background-color: $scooter;
+    }
   }
 }
 
-.shape-2 {
-  animation-name: shape-2;
-  animation-delay: $animation-duration;
-  left: 0;
-  top: 0;
-  z-index: 9;
-  .trapeze {
-    transform: rotate(-30deg);
-  }
-}
-
-.shape-3 {
-  animation-name: shape-3;
-  animation-delay: 2 * $animation-duration;
-  right: 189px;
-  top: 75px;
-  z-index: 8;
-  .trapeze {
-    transform: rotate(-30deg);
-  }
-}
-
-.shape-4 {
-  animation-name: shape-4;
-  animation-delay: 3 * $animation-duration;
-  right: 189px;
-  top: 223px;
-  z-index: 7;
-  .trapeze {
-    transform: rotate(-30deg);
-  }
-}
-
-.shape-5 {
-  animation-name: shape-5;
-  animation-delay: 4 * $animation-duration;
-  right: 159px;
-  top: 200px;
-  transform-origin: 0 0;
-  z-index: 6;
-  .rectangle {
-    height: 93px;
-    width: 165px;
-    transform: skewY(-30deg);
-  }
-}
-
-.shape-6 {
-  animation-name: shape-6;
-  animation-delay: 5 * $animation-duration;
-  left: -62px;
-  top: 250px;
-  z-index: 5;
-  .trapeze {
-    transform: rotate(-90deg);
-  }
-}
-
-.trapeze {
-  border-top: 80px solid;
-  border-left: 46px solid transparent;
-  border-right: 46px solid transparent;
-  height: 0;
-  width: 100px;
-}
-
-.trapeze-aquamarine-blue {
-  border-top-color: $aquamarine-blue;
-}
-
-.trapeze-turquoise {
-  border-top-color: $turquoise;
-}
-
-.trapeze-pelorous {
-  border-top-color: $pelorous;
-}
-
-.rectangle {
-  height: 80px;
-  width: 160px;
-}
-
-.rectangle-scooter {
-  background-color: $scooter;
-}
-
+// keyframes
 @keyframes shape-2 {
   0% {
     transform: rotateY(0deg);

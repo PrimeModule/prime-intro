@@ -1,4 +1,4 @@
-.logo-canvas {
+.pm-logo {
   border: 1px solid red;
   height: 318px;
   margin-top: 100px;
@@ -15,85 +15,73 @@
   transition: transform 0.3s linear;
   transform-origin: 159px 0;
   width: 0; }
-
-.shape-1 {
-  left: 0;
-  top: 0;
-  visibility: visible;
-  z-index: 10; }
-  .shape-1 .trapeze {
-    transform: rotate(-30deg); }
-
-.shape-2 {
-  animation-name: shape-2;
-  animation-delay: 300ms;
-  left: 0;
-  top: 0;
-  z-index: 9; }
-  .shape-2 .trapeze {
-    transform: rotate(-30deg); }
-
-.shape-3 {
-  animation-name: shape-3;
-  animation-delay: 600ms;
-  right: 189px;
-  top: 75px;
-  z-index: 8; }
-  .shape-3 .trapeze {
-    transform: rotate(-30deg); }
-
-.shape-4 {
-  animation-name: shape-4;
-  animation-delay: 900ms;
-  right: 189px;
-  top: 223px;
-  z-index: 7; }
-  .shape-4 .trapeze {
-    transform: rotate(-30deg); }
-
-.shape-5 {
-  animation-name: shape-5;
-  animation-delay: 1200ms;
-  right: 159px;
-  top: 200px;
-  transform-origin: 0 0;
-  z-index: 6; }
-  .shape-5 .rectangle {
-    height: 93px;
-    width: 165px;
-    transform: skewY(-30deg); }
-
-.shape-6 {
-  animation-name: shape-6;
-  animation-delay: 1500ms;
-  left: -62px;
-  top: 250px;
-  z-index: 5; }
-  .shape-6 .trapeze {
-    transform: rotate(-90deg); }
-
-.trapeze {
-  border-top: 80px solid;
-  border-left: 46px solid transparent;
-  border-right: 46px solid transparent;
-  height: 0;
-  width: 100px; }
-
-.trapeze-aquamarine-blue {
-  border-top-color: #76dfe3; }
-
-.trapeze-turquoise {
-  border-top-color: #3dcfd4; }
-
-.trapeze-pelorous {
-  border-top-color: #35b6ba; }
-
-.rectangle {
-  height: 80px;
-  width: 160px; }
-
-.rectangle-scooter {
-  background-color: #3bc7cc; }
+  .shape--1 {
+    left: 0;
+    top: 0;
+    visibility: visible;
+    z-index: 10; }
+    .shape--1 .shape__trapeze {
+      transform: rotate(-30deg); }
+  .shape--2 {
+    animation-name: shape-2;
+    animation-delay: 300ms;
+    left: 0;
+    top: 0;
+    z-index: 9; }
+    .shape--2 .shape__trapeze {
+      transform: rotate(-30deg); }
+  .shape--3 {
+    animation-name: shape-3;
+    animation-delay: 600ms;
+    right: 189px;
+    top: 75px;
+    z-index: 8; }
+    .shape--3 .shape__trapeze {
+      transform: rotate(-30deg); }
+  .shape--4 {
+    animation-name: shape-4;
+    animation-delay: 900ms;
+    right: 189px;
+    top: 223px;
+    z-index: 7; }
+    .shape--4 .shape__trapeze {
+      transform: rotate(-30deg); }
+  .shape--5 {
+    animation-name: shape-5;
+    animation-delay: 1200ms;
+    right: 159px;
+    top: 200px;
+    transform-origin: 0 0;
+    z-index: 6; }
+    .shape--5 .shape__rectangle {
+      height: 93px;
+      width: 165px;
+      transform: skewY(-30deg); }
+  .shape--6 {
+    animation-name: shape-6;
+    animation-delay: 1500ms;
+    left: -62px;
+    top: 250px;
+    z-index: 5; }
+    .shape--6 .shape__trapeze {
+      transform: rotate(-90deg); }
+  .shape__trapeze {
+    border-top: 80px solid;
+    border-left: 46px solid transparent;
+    border-right: 46px solid transparent;
+    height: 0;
+    width: 100px; }
+    .shape__trapeze--aquamarine-blue {
+      border-top-color: #76dfe3; }
+    .shape__trapeze--turquoise {
+      border-top-color: #3dcfd4; }
+    .shape__trapeze--pelorous {
+      border-top-color: #35b6ba; }
+  .shape__rectangle {
+    height: 80px;
+    width: 160px; }
+    .shape__rectangle--scooter {
+      background-color: #3bc7cc; }
 
 @keyframes shape-2 {
   0% {
