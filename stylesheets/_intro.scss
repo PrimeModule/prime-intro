@@ -1,24 +1,30 @@
 $aquamarine-blue: #76dfe3;
 $turquoise: #3dcfd4;
+$scooter: #3bc7cc;
+$pelorous: #35b6ba;
+
+$canvas-width: 318px;
 
 .logo-canvas {
   border: 1px solid red;
   list-style: none;
   height: 450px;
   margin-top: 100px;
+  margin-left: 100px;
   padding: 0;
   position: relative;
-  width: 318px;
+  width: $canvas-width;
 }
 
-.trapeze-container {
+.shape {
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 0.3s linear;
+  transform-origin: $canvas-width/2 0;
   width: 0;
 }
 
-.trapeze-container-1 {
+.shape-1 {
   left: 0;
   top: 0;
   .trapeze {
@@ -26,34 +32,43 @@ $turquoise: #3dcfd4;
   }
 }
 
-.trapeze-container-2 {
+.shape-2 {
   left: 0;
   top: 0;
   transform: rotateY(180deg);
-  transform-origin: 159px 0;
   .trapeze {
     transform: rotate(-30deg);
   }
 }
 
-.trapeze-container-3 {
+.shape-3 {
   right: 189px;
   top: 75px;
   transform: rotate(60deg) rotateY(180deg);
-  transform-origin: 159px 0;
   z-index: 5;
   .trapeze {
     transform: rotate(-30deg);
   }
 }
 
-.trapeze-container-4 {
+.shape-4 {
   right: 189px;
   top: 223px;
-  transform-origin: 159px 0;
   transform: rotate(120deg) rotateY(180deg);
   .trapeze {
     transform: rotate(-30deg);
+  }
+}
+
+.shape-5 {
+  right: 159px;
+  top: 200px;
+  transform-origin: 0 0;
+  transform: rotateY(180deg);
+  .rectangle {
+    height: 93px;
+    width: 165px;
+    transform: skewY(-30deg);
   }
 }
 
@@ -71,4 +86,13 @@ $turquoise: #3dcfd4;
 
 .trapeze-turquoise {
   border-top-color: $turquoise;
+}
+
+.rectangle {
+  height: 80px;
+  width: 160px;
+}
+
+.rectangle-scooter {
+  background-color: $scooter;
 }
