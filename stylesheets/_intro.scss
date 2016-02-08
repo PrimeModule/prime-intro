@@ -81,11 +81,14 @@ $animation-duration: 400ms;
   &--6 {
     animation-name: shape-6;
     animation-delay: 5 * $animation-duration;
-    left: -62px;
-    top: 250px;
+    height: 0;
+    left: -6px;
+    top: 222px;
     z-index: 5;
-    .shape__trapeze {
-      transform: rotate(-90deg);
+    .shape__rectangle {
+      height: inherit;
+      width: 80px;
+      transform: skewY(-30deg);
     }
   }
 
@@ -101,9 +104,6 @@ $animation-duration: 400ms;
     &--turquoise {
       border-top-color: $turquoise;
     }
-    &--pelorous {
-      border-top-color: $pelorous;
-    }
   }
 
   &__rectangle {
@@ -111,6 +111,9 @@ $animation-duration: 400ms;
     width: 160px;
     &--scooter {
       background-color: $scooter;
+    }
+    &--pelorous {
+      background-color: $pelorous;
     }
   }
 }
@@ -158,10 +161,10 @@ $animation-duration: 400ms;
 
 @keyframes shape-6 {
   0% {
-    transform: rotateX(90deg);
+    height: 0;
   }
   100% {
     visibility: visible;
-    transform: rotateX(0deg);
+    height: 140px;
   }
 }

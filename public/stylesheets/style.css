@@ -61,11 +61,14 @@
   .shape--6 {
     animation-name: shape-6;
     animation-delay: 2000ms;
-    left: -62px;
-    top: 250px;
+    height: 0;
+    left: -6px;
+    top: 222px;
     z-index: 5; }
-    .shape--6 .shape__trapeze {
-      transform: rotate(-90deg); }
+    .shape--6 .shape__rectangle {
+      height: inherit;
+      width: 80px;
+      transform: skewY(-30deg); }
   .shape__trapeze {
     border-top: 80px solid;
     border-left: 46px solid transparent;
@@ -76,13 +79,13 @@
       border-top-color: #76dfe3; }
     .shape__trapeze--turquoise {
       border-top-color: #3dcfd4; }
-    .shape__trapeze--pelorous {
-      border-top-color: #35b6ba; }
   .shape__rectangle {
     height: 80px;
     width: 160px; }
     .shape__rectangle--scooter {
       background-color: #3bc7cc; }
+    .shape__rectangle--pelorous {
+      background-color: #35b6ba; }
 
 @keyframes shape-2 {
   0% {
@@ -110,9 +113,9 @@
     transform: rotateY(180deg); } }
 @keyframes shape-6 {
   0% {
-    transform: rotateX(90deg); }
+    height: 0; }
   100% {
     visibility: visible;
-    transform: rotateX(0deg); } }
+    height: 140px; } }
 
 /*# sourceMappingURL=style.css.map */
