@@ -1,2 +1,2 @@
 ## Compile SCSS
-`sass stylesheets:public/stylesheets`
+`sass stylesheets/style.scss public/stylesheets/style.css`

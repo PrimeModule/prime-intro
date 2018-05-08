@@ -5,16 +5,43 @@ $pelorous: #35b6ba;
 
 $canvas-size: 318px;
 
-$animation-duration: 400ms;
+$animation-duration: 225ms;
+
+html,
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.footer {
+  color: #777;
+  font-size: 11px;
+  bottom: 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.message {
+  animation-duration: $animation-duration;
+  animation-delay: 7 * $animation-duration;
+  animation-fill-mode: both;
+  animation-name: zoomIn;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+}
 
 .pm-logo {
   height: $canvas-size;
-  margin-left: -$canvas-size/2;
-  margin-top: -$canvas-size/2 - 30;
-  left: 50%;
-  position: absolute;
+  margin: 80px auto 100px;
+  position: relative;
   width: $canvas-size;
-  top: 50%;
 }
 
 .shape {
@@ -24,7 +51,7 @@ $animation-duration: 400ms;
   visibility: hidden;
   position: absolute;
   transform-style: preserve-3d;
-  transition: transform 0.3s linear;
+  transition: transform 0.3s ease-in-out;
   transform-origin: $canvas-size/2 0;
   width: 0;
   &--1 {
@@ -181,5 +208,16 @@ $animation-duration: 400ms;
   100% {
     visibility: visible;
     height: 140px;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
   }
 }
